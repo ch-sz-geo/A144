@@ -192,7 +192,7 @@ m| NummerAlt
 | öffentlich
 m| Titel
 | Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| UVP:GeolGeotecGutachtenzumVorprojekt,NeubauStandseilbahnHinteresSchlattliStoosSSBII
+| UVP:GeolGeotecGutachtenzumVorprojekt
 | öffentlich
 m| Erstelldatum
 | Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2
@@ -200,7 +200,7 @@ m| Erstelldatum
 | öffentlich
 m| Dokumentlink
 | Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments
-| Q:\GDI\Produktion\Themen\A144\01Schwyz\02Bohrprofil\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
+| Q:\...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
 | öffentlich
 m| Baugesuchsnummer
 | Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht
