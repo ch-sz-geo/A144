@@ -102,7 +102,7 @@ m| Bezeichnung
 |===
 
 ==== Klasse `+Gebiet+`
-Eine Spezialisierung der Klasse `+Geometrie+`, welche den Geometrietyp "Fläche" aufweist.
+Die Klasse `+Gebiet+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Fläche".
 
 [cols=4*,options="header"]
 |===
@@ -120,7 +120,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Pfad+`
-Eine Spezialisierung der Klasse `+Geometrie+`, welche den Geometrietyp "Linie" aufweist.
+Die Klasse `+Pfad+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Linie".
 
 [cols=4*,options="header"]
 |===
@@ -138,7 +138,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Ort+`
-Eine Spezialisierung der Klasse `+Geometrie+`, welche den Geometrietyp "Punkt" aufweist.
+Die Klasse `+Ort+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Punkt".
 
 [cols=4*,options="header"]
 |===
@@ -156,7 +156,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Dokument+`
-Die Klasse ``+Dokument+` führt die Informationen der geologischen Berichte.
+Die Klasse ``+Dokument+` führt die Informationen über die geologischen Berichte.
 
 [cols=4*,options="header"]
 |===
