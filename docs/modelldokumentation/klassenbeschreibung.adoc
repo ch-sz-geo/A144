@@ -32,8 +32,8 @@ m| Bemerkung
 | öffentlich
 |===
 
-==== Klasse `+Dokumenttyp+`
-Über den Dokumenttyp wird die Arte des Dokuments bestimmt. Die Entsprechung im Bundesmodell `+DM_GeolAssets_V2+` ist das Attribut `+AssetItem.AssetKind+`.
+==== Klasse `+Inhalt+`
+Über den Inhalt wird angegeben, welche Elemente ein Dokument aufweist. Die Entsprechung im Bundesmodell `+DM_GeolAssets_V2+` ist das Attribut `+AssetItem.AssetKind+`.
 
 [cols=4*,options="header"]
 |===
@@ -62,6 +62,85 @@ m|Name
 
 === Topic `+Fachdaten+`
 Das Topic `+Fachdaten+` beinhaltet die eigentlichen, durch die zuständige Stelle bewirtschafteten Daten.
+
+==== Klasse `+Dokument+`
+Die Klasse ``+Dokument+` führt die Informationen über die geologischen Berichte.
+
+[cols=4*,options="header"]
+|===
+| Name | Beschreibung | Beispiel | Freigabe
+4+| *Fachattribute*
+m| OID
+| technischer Objektidentifikator
+| ceaa37a9-8614-43fc-9a8b-688f95c30218
+| öffentlich
+m| erfasstVon
+| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
+| Musterha
+| intern
+m| erfasstAm
+| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
+| 1980-03-21T15:38:12
+| intern
+m| geaendertVon
+| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
+| Muelleran
+| intern
+m| geaendertAm
+| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
+| 2024-07-30T08:07:57
+| intern
+m| Kennung
+| fortlaufende, einfach aufgebaute Kennung, welche sich zur Identifikation eignet
+| GA1159
+| öffentlich
+m| KennungAlt
+| Nummer aus dem alten geologischen Archiv; entspricht "IDAlternate" aus DM_GeolAssets_V2
+| GA01.2.1461
+| öffentlich
+m| Titel
+| Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2
+| UVP:GeolGeotecGutachtenzumVorprojekt
+| öffentlich
+m| Erstelldatum
+| Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2
+| 1985-03-21
+| öffentlich
+m| Dokumentlink
+| Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments
+| Q:\...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
+| öffentlich
+m| Baugesuchsnummer
+| Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht
+| B2019-0421
+| öffentlich
+m| Autor
+| Kennung der Objekt-ID des Unternehmens, welches den Bericht verfasst hat. Auf eine ausmodellierte Beziehung wird der Einfachheit halber verzichtet, so dass hier nur die ID eingetragen werden muss.
+| 2a150ef7-eb3d-4661-99d6-52d6eb7a5fd0
+| öffentlich
+m| Bemerkung
+| Kommentar zum entsprechenden Dokument; entspricht "Description" aus DM_GeolAssets_V2
+| Das ist meine Bemerkung zu diesem Dokument.
+| öffentlich
+4+| *Beziehungsattribute*
+m| rGeometrie
+| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
+| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
+| öffentlich
+m| rInhalt
+| Fremdschlüssel zum Inhalt (Stammdaten); entspricht "Kind" aus DM_GeolAssets_V2
+| e0807260-956b-40a2-871a-e32c51ebf192 (für "Bohrprofil")
+| öffentlich
+m| rUntersuchungszweck
+| Fremdschlüssel zum Untersuchungszweck (Stammdaten); entspricht "ManCatLabelRef" aus DM_GeolAssets_V2
+| 7a1c06a0-fec9-415f-9eea-8f8d79069988 (für "Geoenergie")
+| öffentlich
+4+| *Geometrie*
+| - - -
+| - - -
+| - - -
+| - - -
+|===
 
 ==== Klasse `+Geometrie+`
 Die abstrakte Klasse `+Geometrie+` führt die allgemeinen Attribute, welche allen Geometrien eigen sind. Sie dient der Zuordnung einer Geometrie zum jeweiligen Bericht.
@@ -92,7 +171,7 @@ m| geaendertAm
 | intern
 m| Bezeichnung
 | Bezeichnung oder Nummer, mit welcher der Untersuchungsort im Bericht benannt wird.
-| 2024-01-01
+| Lehmgrube
 | öffentlich
 4+| *Geometrie*
 | - - -
@@ -102,7 +181,7 @@ m| Bezeichnung
 |===
 
 ==== Klasse `+Gebiet+`
-Die Klasse `+Gebiet+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Fläche".
+Die Klasse `+Gebiet+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Fläche", welche zum Beispiel bei einem Durchflussnachweis verwendet wird.
 
 [cols=4*,options="header"]
 |===
@@ -120,7 +199,7 @@ m| Geometrie
 |===
 
 ==== Klasse `+Pfad+`
-Die Klasse `+Pfad+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Linie".
+Die Klasse `+Pfad+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Linie", welche zum Beispiel bei einer Tracer-Untersuchung verwendet wird.
 
 [cols=4*,options="header"]
 |===
@@ -138,100 +217,21 @@ m| Geometrie
 |===
 
 ==== Klasse `+Ort+`
-Die Klasse `+Ort+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Punkt".
+Die Klasse `+Ort+` ist eine Spezialisierung der Klasse `+Geometrie+`. Sie enthält Objekte mit dem Geometrietyp "Punkt", welche zum Beispiel bei Abklärungen für eine Wärmepumpe verwendet wird.
 
 [cols=4*,options="header"]
 |===
 | Name | Beschreibung | Beispiel | Freigabe
 4+| *Fachattribute*
-| - - -
-| - - -
-| - - -
-| - - -
+m| Bohrprofil
+| Primärschlüssel des Bohrprofils, falls an diesem Ort eines vorhanden ist
+| 4731c45c-72e9-4811-8f66-b5d5400567bc
+| öffentlich
 4+| *Geometrie*
 m| Geometrie
 | Geometrie vom Typ "Punkt"
 | (ohne Beispiel)
 | öffentlich
-|===
-
-==== Klasse `+Dokument+`
-Die Klasse ``+Dokument+` führt die Informationen über die geologischen Berichte.
-
-[cols=4*,options="header"]
-|===
-| Name | Beschreibung | Beispiel | Freigabe
-4+| *Fachattribute*
-m| OID
-| technischer Objektidentifikator
-| ceaa37a9-8614-43fc-9a8b-688f95c30218
-| öffentlich
-m| erfasstVon
-| Loginname der Person, welche den Datensatz erstellt hat (Autor); wird durch das System gesetzt
-| Musterha
-| intern
-m| erfasstAm
-| Datum und Zeit, an dem der Datensatz erstellt wurde; wird durch das System gesetzt
-| 1980-03-21T15:38:12
-| intern
-m| geaendertVon
-| Loginname der Person, welche den Datensatz zuletzt geändert hat (Editor); wird durch das System gesetzt
-| Muelleran
-| intern
-m| geaendertAm
-| Datum und Zeit, an dem der Datensatz zuletzt geändert wurde; wird durch das System gesetzt
-| 2024-07-30T08:07:57
-| intern
-m| Nummer
-| fortlaufende, einfach aufgebaute Nummer, welche sich zur Identifikation eignet
-| GA1159
-| öffentlich
-m| NummerAlt
-| Nummer aus dem alten geologischen Archiv; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| GA01.2.1461
-| öffentlich
-m| Titel
-| Titel des Dokuments; entspricht "IDAlternate" aus DM_GeolAssets_V2
-| UVP:GeolGeotecGutachtenzumVorprojekt
-| öffentlich
-m| Erstelldatum
-| Datum des Berichtes; entspricht "DateCreation" aus DM_GeolAssets_V2
-| 1985-03-21
-| öffentlich
-m| Dokumentlink
-| Link, über den auf das Dokument zugegrifen werden kann; Pfad zum Speicher- bzw. Ablageort des Dokuments
-| Q:\...\2021-01-18-0303_NB_Standseilbahn_Stoos_Bauproj_KL.pdf
-| öffentlich
-m| Baugesuchsnummer
-| Kennung des Baugesuches, welches mit dem Dokument in Verbindung steht
-| B2019-0421
-| öffentlich
-m| Autor
-| Kennung der Objekt-ID des Unternehmens, welches den Bericht verfasst hat. Auf eine ausmodellierte Beziehung wird der Einfachheit halber verzichtet, so dass hier nur die ID eingetragen werden muss.
-| 2a150ef7-eb3d-4661-99d6-52d6eb7a5fd0
-| öffentlich
-m| Bemerkung
-| Kommentar zum entsprechenden Dokument
-| Das ist meine Bemerkung zu diesem Dokument.
-| öffentlich
-4+| *Beziehungsattribute*
-m| rGeometrie
-| Fremdschlüssel zur Geometrie, welche mit dem Dokument verknüpft ist.
-| ccee2bad-419e-454e-9e0f-9ef2ae2d4d44
-| öffentlich
-m| rDokumenttyp
-| Fremdschlüssel zum Dokumenttyp (Stammdaten)
-| todo aus Stammdaten
-| öffentlich
-m| rUntersuchungszweck
-| Fremdschlüssel zum Untersuchungszweck (Stammdaten)
-| todo aus Stammdaten
-| öffentlich
-4+| *Geometrie*
-| - - -
-| - - -
-| - - -
-| - - -
 |===
 
 ifdef::backend-pdf[]
