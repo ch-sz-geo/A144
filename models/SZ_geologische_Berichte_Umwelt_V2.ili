@@ -36,7 +36,7 @@ MODEL SZ_geologische_Berichte_Umwelt_V2 (de)  !!todo: Es gibt ein Bundesmodell "
     Polygon = SURFACE WITH (STRAIGHTS) VERTEX Punkt WITHOUT OVERLAPS > 0.001;
 
 !!------------------------------------------------------------------------------
-  TOPIC Stammdaten =                                   !! Kataloge statt Domains in SZ_geologische_Berichte_Umwelt_V2
+  TOPIC Stammdaten =
 !!------------------------------------------------------------------------------
     CLASS Katalogeintrag (ABSTRACT) = 
       OID AS UUIDOID;
