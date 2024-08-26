@@ -1,6 +1,7 @@
 == Diagramme
 === Komponentendiagramm
 image::../img/Komponentendiagramm.JPG[]
+Hier mache ich mal einen Test
 
 === Klassendiagramm
 image::../img/Klassendiagramm.JPG[]
