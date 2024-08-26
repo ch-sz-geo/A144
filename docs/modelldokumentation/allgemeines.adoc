@@ -16,11 +16,13 @@ Ausarbeitung eines Geodatenmodells zuständig sind.
 ===  Zweck des Dokuments
 Dieses Dokument beschreibt den Geobasisdatensatz
  
-* *__<Name des Datensatzes>__.* +
+* *__geologische Berichte des Untersuchungsbereichs "Umwelt" (A144)__.* +
 
-__<weitere Beschreibungen>__ +
+Darin werden Informationen zu geologischen Berichten geführt, welche in den Zuständigkeitsbereich des Amtes für Umwelt und Energie (AfU) fallen. Es gibt weitere Ämter, die im Rahmen ihrers Vollzugs geologische Berichte erfassen. Jedes Amt führ seine Daten in einem eigenen Thema mit einem eigenen Datenmodell nach. Diese sind:
 
-Der Geobasisdatensatz ist Bestandteil des ÖREB-Katasters. +
+* Amt für Wald und Natur -> geologische Berichte des Untersuchungsbereichs "Naturgefahren"
+* Amt für Wasserbau -> geologische Berichte des Untersuchungsbereichs "Wasserbau"
+* Tiefbauamt -> geologische Berichte des Untersuchungsbereichs "Tiefbau"
 
 Diese Dokumentation richtet sich an alle Personen, welche sich über dieses Thema informieren möchten.
 
