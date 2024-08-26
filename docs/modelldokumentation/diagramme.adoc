@@ -1,9 +1,9 @@
 == Diagramme
 === Komponentendiagramm
-image::../img/Komponentendiagramm.JPG[]
+image::../img/Komponentendiagramm.jpg[]
 
 === Klassendiagramm
-image::../img/Klassendiagramm.JPG[]
+image::../img/Klassendiagramm.jpg[]
 
 ifdef::backend-pdf[]
 <<<
