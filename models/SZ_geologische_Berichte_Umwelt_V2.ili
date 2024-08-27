@@ -15,12 +15,12 @@ INTERLIS 2.3;
 !!      Version     | wer | was
 !! Datum      | Nr  |     |
 !!------------------------------------------------------------------------------
-!! 2020-06-29 | 1.0 | TH  | Erstfassung
 !! 2023-03-01 | 2.0 | Kep | Anpassungen:
 !!                            - Gesamtüberarbeitung auf Antrag AfU
 !!                            - Umbenennung in "SZ_geologische_Berichte_Umwelt_V2"
+!! 2020-06-29 | 1.0 | TH  | Erstfassung
 !!==============================================================================
-MODEL SZ_geologische_Berichte_Umwelt_V2 (de)  !!todo: Es gibt ein Bundesmodell "Datenmodell Borhdaten (ID 50.4: Archiv Bohrdaten)". Aus diesem Grund schlage ich den Namen "geologische Berichte" oder "geologiesches Archv" vor
+MODEL SZ_geologische_Berichte_Umwelt_V2 (de)
   AT "http://models.geo.sz.ch"
   VERSION "2023-03-01" =
   IMPORTS UNQUALIFIED INTERLIS;
