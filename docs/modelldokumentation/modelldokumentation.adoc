@@ -1,9 +1,9 @@
 // Hier den Titel eingeben
-:title: Modelldokumentation 
-:subtitle: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144)
+:title: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144) 
+:subtitle: Modelldokumentation
 ifdef::backend-pdf[]
-= {title}
-{subtitle}
+= {subtitle}
+{title}
 :title-logo-image: image:../../themes/header_sz_pdf.png[top=-10%,align=center,width=fill]
 :pdf-theme: ../../themes/pdfTheme.yml
 :pdf-fontsdir: fonts/
@@ -34,13 +34,6 @@ image:../../themes/logo_kt_sz_rgb.jpg[]
 = {title}
 [.subtitle]#{subtitle}# +
 
-****
-
-* https://ch-sz-geo.github.io/A000_entrypage/[zur Startseite] +
-* https://amandawetter.github.io/A144_Rebuild/[Übersicht A144 Dokumentation] +
-* https://amandawetter.github.io/Aa144_Rebuild/docs/modelldokumentation.pdf[Dokumentation als PDF] +
-
-****
 endif::[]
 
 // Die Verwiese auf die Inhalte der Dokumentation sollen im README auf Github nicht angezeigt werden.
