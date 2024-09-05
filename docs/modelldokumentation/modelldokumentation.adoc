@@ -1,9 +1,9 @@
 // Hier den Titel eingeben
-:title: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144) 
-:subtitle: Modelldokumentation
+:title: Modelldokumentation
+:subtitle: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144)
 ifdef::backend-pdf[]
-= {subtitle}
-{title}
+= {title}
+{subtitle}
 :title-logo-image: image:../../themes/header_sz_pdf.png[top=-10%,align=center,width=fill]
 :pdf-theme: ../../themes/pdfTheme.yml
 :pdf-fontsdir: fonts/
