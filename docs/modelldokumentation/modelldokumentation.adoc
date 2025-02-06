@@ -1,6 +1,6 @@
 // Hier den Titel eingeben
-:title: Modelldokumentation
-:subtitle: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144)
+:title: geologische Berichte des Untersuchungsbereichs "Umwelt" (A144)
+:subtitle: Modelldokumentation
 ifdef::backend-pdf[]
 = {title}
 {subtitle}
