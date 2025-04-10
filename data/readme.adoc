@@ -1,3 +1,3 @@
 = Dateibeschreibung
 
-* *<Dateiname>:* Diese Datei enthält <zu ergänzen>.
+* Die Stammdaten zu diesem Thema liegen https://data.geo.sz.ch/public/Themen/A144b/[hier]. Sie werden noch nicht über gitHub verwaltet.
