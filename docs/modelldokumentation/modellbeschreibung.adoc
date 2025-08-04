@@ -1,6 +1,9 @@
 == Modellbeschreibung
 
-<Beschreibung einfügen>
+Dieses Geodatenmodell bildet die Grundlage für die Erfassung und das Verwalten von geologischen Berichten, wie sie im Rahmen der Bewilligungs- oder Amtstätigkeit des Amts für Umwelt und Energie anfallen. Es setzt sich zusammen aus den zwei Themen «Stammdaten» und «Fachdaten»:
+
+- Die *«Stammdaten»* enthalten sämtliche für die Erfassung relevante Kataloge.
+- Im Thema *«Bohrprofile»* werden die Geometrien und beschreibenden Attribute zu den geologischen Berichten erfasst.
 
 ifdef::backend-pdf[]
 <<<
