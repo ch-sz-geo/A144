@@ -61,7 +61,7 @@ m|Name
 |===
 
 ==== Klasse `+Status+`
-Die Werte für den Stauts geben an, wie die Erfassung der Bohrlinformationen fortgeschritten ist. Sie dienen der zuständigen Stelle als Hinweis, ob alle Bohrungen eines Dokuments vollständig dokumentiert wurden oder diesbezüglich noch Arbeiten zu tun sind.
+Die Werte für den Status geben an, wie die Erfassung der Bohrlinformationen fortgeschritten ist. Sie dienen der zuständigen Stelle als Hinweis, ob alle Bohrungen eines Dokuments vollständig dokumentiert wurden oder diesbezüglich noch Arbeiten zu tun sind.
 
 [cols=4*,options="header"]
 |===
