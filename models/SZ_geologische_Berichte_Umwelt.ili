@@ -7,11 +7,6 @@ INTERLIS 2.3;
 !!@ Themennummer        = "A144";
 !!@ iliCompilerVersion  = "ili2c-5.5.3-6c54f443006d3ca72d3e5a2392e7d5a2f75b6e8b";
 !!------------------------------------------------------------------------------
-!! Todo: vgl. die versch. "todo" im Datenmodell
-!!------------------------------------------------------------------------------
-!! Info:
-!!   - Grundlage für dieses Datenmodell: I:\AGI\Geoinformation\Produkte\GDI\Themen\A144 Bohrdaten\a\model\2023-08-03_SZ_Bohrdaten_V2 Vorschalg AfU.ili
-!!------------------------------------------------------------------------------
 !!      Version     | wer | was
 !! Datum      | Nr  |     |
 !!------------------------------------------------------------------------------
@@ -55,6 +50,11 @@ MODEL SZ_geologische_Berichte_Umwelt_V2 (de)
       UNIQUE Code;
       UNIQUE Name;
     END Untersuchungszweck;
+
+    CLASS Status EXTENDS Katalogeintrag =
+      UNIQUE Code;
+      UNIQUE Name;
+    END Status;
 
   END Stammdaten;
 
@@ -101,6 +101,15 @@ MODEL SZ_geologische_Berichte_Umwelt_V2 (de)
       Geometrie  :  MANDATORY  Punkt;
     END Ort;
 
+    CLASS Bohrdetail =
+      OID AS UUIDOID;
+      erfasstVon    :  MANDATORY  TEXT*100;
+      erfasstAm     :  MANDATORY  XMLDateTime;
+      geaendertVon  :  MANDATORY  TEXT*100;
+      geaendertAm   :  MANDATORY  XMLDateTime;
+      Bohrung       :  MANDATORY  UUIDOID;
+    END Bohrdetail;
+
     ASSOCIATION Geometrie__Dokument =
       rGeometrie  --  {1..*}  Geometrie;
       rDokument   --  {0..*}  Dokument;
@@ -115,6 +124,16 @@ MODEL SZ_geologische_Berichte_Umwelt_V2 (de)
       rUntersuchungszweck (EXTERNAL)  --  {0..1}  SZ_geologische_Berichte_Umwelt_V2.Stammdaten.Untersuchungszweck;
       rDokument                       --  {0..*}  Dokument;
     END Untersuchungszweck__Dokument; 
+
+    ASSOCIATION Status__Dokument =
+      rStatus (EXTERNAL)  --  {1}     SZ_geologische_Berichte_Umwelt_V2.Stammdaten.Status;
+      rDokument           --  {0..*}  Dokument;
+    END Status__Dokument; 
+
+    ASSOCIATION Dokument__Bohrdetail =
+      rDokument    --  {1}     Dokument;
+      rBohrdetail  --  {0..*}  Bohrdetail;
+    END Dokument__Bohrdetail;
 
   END Fachdaten;
 
